@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import ApplyJob from './pages/ApplyJob.jsx'
 import Applications from './pages/Applications.jsx'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
         <Route path='/apply-job/:id' element={<ApplyJob />} />
         <Route path='/applications' element={<Applications />} />
       </Routes>
+      <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
